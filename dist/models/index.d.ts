@@ -10,6 +10,7 @@ export * from './ExceptionResponseEntity';
 export * from './ExceptionResponseEntityErrorsInner';
 export * from './ExtractContactFromFileRequestBodyDto';
 export * from './ExtractFinancialRecordFromFileRequestBodyDto';
+export * from './FileEntity';
 export * from './FinancialRecordEntity';
 export * from './FinancialRecordsBulkCreateExtractionForWebAppJobRequestEntity';
 export * from './HealthResponseDto';

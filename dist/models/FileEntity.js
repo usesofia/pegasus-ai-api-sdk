@@ -13,16 +13,16 @@
  * Do not edit the class manually.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateFileUploadRequestBodyDtoChannelEnum = exports.CreateFileUploadRequestBodyDtoFileTypeEnum = void 0;
-exports.instanceOfCreateFileUploadRequestBodyDto = instanceOfCreateFileUploadRequestBodyDto;
-exports.CreateFileUploadRequestBodyDtoFromJSON = CreateFileUploadRequestBodyDtoFromJSON;
-exports.CreateFileUploadRequestBodyDtoFromJSONTyped = CreateFileUploadRequestBodyDtoFromJSONTyped;
-exports.CreateFileUploadRequestBodyDtoToJSON = CreateFileUploadRequestBodyDtoToJSON;
-exports.CreateFileUploadRequestBodyDtoToJSONTyped = CreateFileUploadRequestBodyDtoToJSONTyped;
+exports.FileEntityStatusEnum = exports.FileEntityFileTypeEnum = void 0;
+exports.instanceOfFileEntity = instanceOfFileEntity;
+exports.FileEntityFromJSON = FileEntityFromJSON;
+exports.FileEntityFromJSONTyped = FileEntityFromJSONTyped;
+exports.FileEntityToJSON = FileEntityToJSON;
+exports.FileEntityToJSONTyped = FileEntityToJSONTyped;
 /**
  * @export
  */
-exports.CreateFileUploadRequestBodyDtoFileTypeEnum = {
+exports.FileEntityFileTypeEnum = {
     Default: 'DEFAULT',
     FinancialRecord: 'FINANCIAL_RECORD',
     Export: 'EXPORT',
@@ -38,16 +38,20 @@ exports.CreateFileUploadRequestBodyDtoFileTypeEnum = {
 /**
  * @export
  */
-exports.CreateFileUploadRequestBodyDtoChannelEnum = {
-    WebApp: 'WEB_APP',
-    Whatsapp: 'WHATSAPP',
-    System: 'SYSTEM',
-    Email: 'EMAIL'
+exports.FileEntityStatusEnum = {
+    Pending: 'PENDING',
+    Completed: 'COMPLETED',
+    Failed: 'FAILED',
+    Deleted: 'DELETED'
 };
 /**
- * Check if a given object implements the CreateFileUploadRequestBodyDto interface.
+ * Check if a given object implements the FileEntity interface.
  */
-function instanceOfCreateFileUploadRequestBodyDto(value) {
+function instanceOfFileEntity(value) {
+    if (!('id' in value) || value['id'] === undefined)
+        return false;
+    if (!('ownerOrganization' in value) || value['ownerOrganization'] === undefined)
+        return false;
     if (!('originalFileName' in value) || value['originalFileName'] === undefined)
         return false;
     if (!('mimeType' in value) || value['mimeType'] === undefined)
@@ -56,40 +60,58 @@ function instanceOfCreateFileUploadRequestBodyDto(value) {
         return false;
     if (!('fileType' in value) || value['fileType'] === undefined)
         return false;
-    if (!('channel' in value) || value['channel'] === undefined)
+    if (!('objectName' in value) || value['objectName'] === undefined)
+        return false;
+    if (!('status' in value) || value['status'] === undefined)
+        return false;
+    if (!('createdAt' in value) || value['createdAt'] === undefined)
+        return false;
+    if (!('updatedAt' in value) || value['updatedAt'] === undefined)
         return false;
     return true;
 }
-function CreateFileUploadRequestBodyDtoFromJSON(json) {
-    return CreateFileUploadRequestBodyDtoFromJSONTyped(json, false);
+function FileEntityFromJSON(json) {
+    return FileEntityFromJSONTyped(json, false);
 }
-function CreateFileUploadRequestBodyDtoFromJSONTyped(json, ignoreDiscriminator) {
+function FileEntityFromJSONTyped(json, ignoreDiscriminator) {
     if (json == null) {
         return json;
     }
     return {
+        'id': json['id'],
+        'ownerOrganization': json['ownerOrganization'],
         'originalFileName': json['originalFileName'],
         'mimeType': json['mimeType'],
         'size': json['size'],
         'fileType': json['fileType'],
+        'objectName': json['objectName'],
+        'status': json['status'],
+        'createdAt': json['createdAt'],
+        'updatedAt': json['updatedAt'],
+        'deletedAt': json['deletedAt'] == null ? undefined : json['deletedAt'],
         'signedUrl': json['signedUrl'] == null ? undefined : json['signedUrl'],
-        'channel': json['channel'],
     };
 }
-function CreateFileUploadRequestBodyDtoToJSON(json) {
-    return CreateFileUploadRequestBodyDtoToJSONTyped(json, false);
+function FileEntityToJSON(json) {
+    return FileEntityToJSONTyped(json, false);
 }
-function CreateFileUploadRequestBodyDtoToJSONTyped(value, ignoreDiscriminator) {
+function FileEntityToJSONTyped(value, ignoreDiscriminator) {
     if (ignoreDiscriminator === void 0) { ignoreDiscriminator = false; }
     if (value == null) {
         return value;
     }
     return {
+        'id': value['id'],
+        'ownerOrganization': value['ownerOrganization'],
         'originalFileName': value['originalFileName'],
         'mimeType': value['mimeType'],
         'size': value['size'],
         'fileType': value['fileType'],
+        'objectName': value['objectName'],
+        'status': value['status'],
+        'createdAt': value['createdAt'],
+        'updatedAt': value['updatedAt'],
+        'deletedAt': value['deletedAt'],
         'signedUrl': value['signedUrl'],
-        'channel': value['channel'],
     };
 }

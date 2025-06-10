@@ -22,6 +22,7 @@ src/models/ExceptionResponseEntity.ts
 src/models/ExceptionResponseEntityErrorsInner.ts
 src/models/ExtractContactFromFileRequestBodyDto.ts
 src/models/ExtractFinancialRecordFromFileRequestBodyDto.ts
+src/models/FileEntity.ts
 src/models/FinancialRecordEntity.ts
 src/models/FinancialRecordsBulkCreateExtractionForWebAppJobRequestEntity.ts
 src/models/HealthResponseDto.ts

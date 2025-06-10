@@ -28,6 +28,7 @@ __exportStar(require("./ExceptionResponseEntity"), exports);
 __exportStar(require("./ExceptionResponseEntityErrorsInner"), exports);
 __exportStar(require("./ExtractContactFromFileRequestBodyDto"), exports);
 __exportStar(require("./ExtractFinancialRecordFromFileRequestBodyDto"), exports);
+__exportStar(require("./FileEntity"), exports);
 __exportStar(require("./FinancialRecordEntity"), exports);
 __exportStar(require("./FinancialRecordsBulkCreateExtractionForWebAppJobRequestEntity"), exports);
 __exportStar(require("./HealthResponseDto"), exports);
