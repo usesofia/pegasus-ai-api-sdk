@@ -80,7 +80,7 @@ var FinancialRecordsApi = /** @class */ (function (_super) {
      */
     FinancialRecordsApi.prototype.extractFinancialRecordFromFileRaw = function (requestParameters, initOverrides) {
         return __awaiter(this, void 0, void 0, function () {
-            var queryParameters, headerParameters, response;
+            var queryParameters, headerParameters, urlPath, response;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -90,8 +90,9 @@ var FinancialRecordsApi = /** @class */ (function (_super) {
                         queryParameters = {};
                         headerParameters = {};
                         headerParameters['Content-Type'] = 'application/json';
+                        urlPath = "/external/financial-records/extract-from-file";
                         return [4 /*yield*/, this.request({
-                                path: "/external/financial-records/extract-from-file",
+                                path: urlPath,
                                 method: 'POST',
                                 headers: headerParameters,
                                 query: queryParameters,
@@ -126,7 +127,7 @@ var FinancialRecordsApi = /** @class */ (function (_super) {
      */
     FinancialRecordsApi.prototype.processFinancialRecordsBulkCreateExtractionForWebAppRaw = function (requestParameters, initOverrides) {
         return __awaiter(this, void 0, void 0, function () {
-            var queryParameters, headerParameters, response;
+            var queryParameters, headerParameters, urlPath, response;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -136,8 +137,9 @@ var FinancialRecordsApi = /** @class */ (function (_super) {
                         queryParameters = {};
                         headerParameters = {};
                         headerParameters['Content-Type'] = 'application/json';
+                        urlPath = "/internal/queues/financial-records-bulk-create-extraction-for-web-app";
                         return [4 /*yield*/, this.request({
-                                path: "/internal/queues/financial-records-bulk-create-extraction-for-web-app",
+                                path: urlPath,
                                 method: 'POST',
                                 headers: headerParameters,
                                 query: queryParameters,
@@ -170,7 +172,7 @@ var FinancialRecordsApi = /** @class */ (function (_super) {
      */
     FinancialRecordsApi.prototype.startFinancialRecordsBulkCreateExtractionForWebAppRaw = function (requestParameters, initOverrides) {
         return __awaiter(this, void 0, void 0, function () {
-            var queryParameters, headerParameters, response;
+            var queryParameters, headerParameters, urlPath, response;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -180,8 +182,9 @@ var FinancialRecordsApi = /** @class */ (function (_super) {
                         queryParameters = {};
                         headerParameters = {};
                         headerParameters['Content-Type'] = 'application/json';
+                        urlPath = "/external/financial-records/bulk-create-extraction-for-web-app/start";
                         return [4 /*yield*/, this.request({
-                                path: "/external/financial-records/bulk-create-extraction-for-web-app/start",
+                                path: urlPath,
                                 method: 'POST',
                                 headers: headerParameters,
                                 query: queryParameters,

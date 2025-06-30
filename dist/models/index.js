@@ -18,12 +18,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /* eslint-disable */
 __exportStar(require("./CacheGetResponseDto"), exports);
 __exportStar(require("./CacheSetDto"), exports);
-__exportStar(require("./ContactEntity"), exports);
-__exportStar(require("./ContactEntityAddress"), exports);
-__exportStar(require("./ContactsBulkCreateExtractionForWebAppJobRequestEntity"), exports);
 __exportStar(require("./ExceptionResponseEntity"), exports);
 __exportStar(require("./ExceptionResponseEntityErrorsInner"), exports);
-__exportStar(require("./ExtractContactFromFileRequestBodyDto"), exports);
 __exportStar(require("./ExtractFinancialRecordFromFileRequestBodyDto"), exports);
 __exportStar(require("./FinancialRecordEntity"), exports);
 __exportStar(require("./FinancialRecordsBulkCreateExtractionForWebAppJobRequestEntity"), exports);

@@ -125,8 +125,11 @@ export class FinancialRecordsApi extends runtime.BaseAPI implements FinancialRec
 
         headerParameters['Content-Type'] = 'application/json';
 
+
+        let urlPath = `/external/financial-records/extract-from-file`;
+
         const response = await this.request({
-            path: `/external/financial-records/extract-from-file`,
+            path: urlPath,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -161,8 +164,11 @@ export class FinancialRecordsApi extends runtime.BaseAPI implements FinancialRec
 
         headerParameters['Content-Type'] = 'application/json';
 
+
+        let urlPath = `/internal/queues/financial-records-bulk-create-extraction-for-web-app`;
+
         const response = await this.request({
-            path: `/internal/queues/financial-records-bulk-create-extraction-for-web-app`,
+            path: urlPath,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -196,8 +202,11 @@ export class FinancialRecordsApi extends runtime.BaseAPI implements FinancialRec
 
         headerParameters['Content-Type'] = 'application/json';
 
+
+        let urlPath = `/external/financial-records/bulk-create-extraction-for-web-app/start`;
+
         const response = await this.request({
-            path: `/external/financial-records/bulk-create-extraction-for-web-app/start`,
+            path: urlPath,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,

@@ -2,12 +2,8 @@
 /* eslint-disable */
 export * from './CacheGetResponseDto';
 export * from './CacheSetDto';
-export * from './ContactEntity';
-export * from './ContactEntityAddress';
-export * from './ContactsBulkCreateExtractionForWebAppJobRequestEntity';
 export * from './ExceptionResponseEntity';
 export * from './ExceptionResponseEntityErrorsInner';
-export * from './ExtractContactFromFileRequestBodyDto';
 export * from './ExtractFinancialRecordFromFileRequestBodyDto';
 export * from './FinancialRecordEntity';
 export * from './FinancialRecordsBulkCreateExtractionForWebAppJobRequestEntity';
