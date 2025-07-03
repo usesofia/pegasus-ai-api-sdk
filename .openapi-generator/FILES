@@ -2,11 +2,16 @@
 .npmignore
 README.md
 package.json
+src/apis/BankTransactionsApi.ts
 src/apis/CacheApi.ts
 src/apis/FinancialRecordsApi.ts
 src/apis/HealthApi.ts
 src/apis/index.ts
 src/index.ts
+src/models/BankTransactionsBestSuggestedActionEntity.ts
+src/models/BankTransactionsBestSuggestedActionEntityCreateData.ts
+src/models/BankTransactionsBestSuggestedActionEntityCreateDataFinancialRecord.ts
+src/models/BankTransactionsBestSuggestedActionEntityLinkData.ts
 src/models/CacheGetResponseDto.ts
 src/models/CacheSetDto.ts
 src/models/ExceptionResponseEntity.ts
