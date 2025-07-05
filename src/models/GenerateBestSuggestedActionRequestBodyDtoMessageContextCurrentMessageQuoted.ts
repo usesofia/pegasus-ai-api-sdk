@@ -20,13 +20,6 @@ import {
     GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFromToJSON,
     GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFromToJSONTyped,
 } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom';
-import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo';
-import {
-    GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToFromJSON,
-    GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToFromJSONTyped,
-    GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToToJSON,
-    GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToToJSONTyped,
-} from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo';
 import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner';
 import {
     GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInnerFromJSON,
@@ -60,12 +53,6 @@ export interface GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentM
      */
     from: GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom;
     /**
-     * 
-     * @type {GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo}
-     * @memberof GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted
-     */
-    to: GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo;
-    /**
      * Conteúdo da mensagem citada.
      * @type {string}
      * @memberof GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted
@@ -86,7 +73,6 @@ export function instanceOfGenerateBestSuggestedActionRequestBodyDtoMessageContex
     if (!('id' in value) || value['id'] === undefined) return false;
     if (!('timestamp' in value) || value['timestamp'] === undefined) return false;
     if (!('from' in value) || value['from'] === undefined) return false;
-    if (!('to' in value) || value['to'] === undefined) return false;
     if (!('content' in value) || value['content'] === undefined) return false;
     if (!('files' in value) || value['files'] === undefined) return false;
     return true;
@@ -105,7 +91,6 @@ export function GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMe
         'id': json['id'],
         'timestamp': json['timestamp'],
         'from': GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFromFromJSON(json['from']),
-        'to': GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToFromJSON(json['to']),
         'content': json['content'],
         'files': ((json['files'] as Array<any>).map(GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInnerFromJSON)),
     };
@@ -125,7 +110,6 @@ export function GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMe
         'id': value['id'],
         'timestamp': value['timestamp'],
         'from': GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFromToJSON(value['from']),
-        'to': GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToToJSON(value['to']),
         'content': value['content'],
         'files': ((value['files'] as Array<any>).map(GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInnerToJSON)),
     };

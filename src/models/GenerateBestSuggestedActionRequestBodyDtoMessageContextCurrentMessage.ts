@@ -20,13 +20,6 @@ import {
     GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFromToJSON,
     GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFromToJSONTyped,
 } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom';
-import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo';
-import {
-    GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToFromJSON,
-    GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToFromJSONTyped,
-    GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToToJSON,
-    GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToToJSONTyped,
-} from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo';
 import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted';
 import {
     GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuotedFromJSON,
@@ -49,7 +42,7 @@ import {
  */
 export interface GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessage {
     /**
-     * 
+     * ID da mensagem.
      * @type {string}
      * @memberof GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessage
      */
@@ -60,12 +53,6 @@ export interface GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentM
      * @memberof GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessage
      */
     from: GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom;
-    /**
-     * 
-     * @type {GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo}
-     * @memberof GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessage
-     */
-    to: GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo;
     /**
      * Timestamp da mensagem.
      * @type {string}
@@ -98,7 +85,6 @@ export interface GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentM
 export function instanceOfGenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessage(value: object): value is GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessage {
     if (!('id' in value) || value['id'] === undefined) return false;
     if (!('from' in value) || value['from'] === undefined) return false;
-    if (!('to' in value) || value['to'] === undefined) return false;
     if (!('timestamp' in value) || value['timestamp'] === undefined) return false;
     if (!('content' in value) || value['content'] === undefined) return false;
     if (!('files' in value) || value['files'] === undefined) return false;
@@ -117,7 +103,6 @@ export function GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMe
         
         'id': json['id'],
         'from': GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFromFromJSON(json['from']),
-        'to': GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToFromJSON(json['to']),
         'timestamp': json['timestamp'],
         'content': json['content'],
         'files': ((json['files'] as Array<any>).map(GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInnerFromJSON)),
@@ -138,7 +123,6 @@ export function GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMe
         
         'id': value['id'],
         'from': GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFromToJSON(value['from']),
-        'to': GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToToJSON(value['to']),
         'timestamp': value['timestamp'],
         'content': value['content'],
         'files': ((value['files'] as Array<any>).map(GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInnerToJSON)),

@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom';
-import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo';
 import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner';
 /**
  * Mensagem citada.
@@ -36,12 +35,6 @@ export interface GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentM
      * @memberof GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted
      */
     from: GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom;
-    /**
-     *
-     * @type {GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo}
-     * @memberof GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted
-     */
-    to: GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo;
     /**
      * Conteúdo da mensagem citada.
      * @type {string}

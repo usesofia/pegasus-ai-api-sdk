@@ -19,7 +19,6 @@ exports.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFro
 exports.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToJSON = GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToJSON;
 exports.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToJSONTyped = GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToJSONTyped;
 var GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom_1 = require("./GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom");
-var GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo_1 = require("./GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo");
 var GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted_1 = require("./GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted");
 var GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner_1 = require("./GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner");
 /**
@@ -29,8 +28,6 @@ function instanceOfGenerateBestSuggestedActionRequestBodyDtoMessageContextCurren
     if (!('id' in value) || value['id'] === undefined)
         return false;
     if (!('from' in value) || value['from'] === undefined)
-        return false;
-    if (!('to' in value) || value['to'] === undefined)
         return false;
     if (!('timestamp' in value) || value['timestamp'] === undefined)
         return false;
@@ -50,7 +47,6 @@ function GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFr
     return {
         'id': json['id'],
         'from': (0, GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom_1.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFromFromJSON)(json['from']),
-        'to': (0, GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo_1.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToFromJSON)(json['to']),
         'timestamp': json['timestamp'],
         'content': json['content'],
         'files': (json['files'].map(GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner_1.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInnerFromJSON)),
@@ -68,7 +64,6 @@ function GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo
     return {
         'id': value['id'],
         'from': (0, GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom_1.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFromToJSON)(value['from']),
-        'to': (0, GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo_1.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToToJSON)(value['to']),
         'timestamp': value['timestamp'],
         'content': value['content'],
         'files': (value['files'].map(GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner_1.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInnerToJSON)),

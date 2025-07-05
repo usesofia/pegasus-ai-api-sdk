@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom';
-import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo';
 import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted';
 import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner';
 /**
@@ -20,7 +19,7 @@ import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMess
  */
 export interface GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessage {
     /**
-     *
+     * ID da mensagem.
      * @type {string}
      * @memberof GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessage
      */
@@ -31,12 +30,6 @@ export interface GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentM
      * @memberof GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessage
      */
     from: GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom;
-    /**
-     *
-     * @type {GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo}
-     * @memberof GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessage
-     */
-    to: GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo;
     /**
      * Timestamp da mensagem.
      * @type {string}
