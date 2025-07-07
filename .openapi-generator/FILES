@@ -2,6 +2,7 @@
 .npmignore
 README.md
 package.json
+src/apis/AgentApi.ts
 src/apis/BankTransactionsApi.ts
 src/apis/CacheApi.ts
 src/apis/EmailForwardingIntegrationApi.ts
@@ -9,6 +10,12 @@ src/apis/FinancialRecordsApi.ts
 src/apis/HealthApi.ts
 src/apis/index.ts
 src/index.ts
+src/models/AgentReplyEntity.ts
+src/models/AgentReplyEntityDocument.ts
+src/models/AgentReplyEntityImage.ts
+src/models/AgentReplyEntityText.ts
+src/models/AgentRequestBodyDto.ts
+src/models/AgentRequestBodyDtoMessageContext.ts
 src/models/BankTransactionsBestSuggestedActionEntity.ts
 src/models/BankTransactionsBestSuggestedActionEntityCreateData.ts
 src/models/BankTransactionsBestSuggestedActionEntityCreateDataFinancialRecord.ts
