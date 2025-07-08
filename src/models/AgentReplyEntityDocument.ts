@@ -43,6 +43,12 @@ export interface AgentReplyEntityDocument {
      * @memberof AgentReplyEntityDocument
      */
     caption?: string | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof AgentReplyEntityDocument
+     */
+    fileSize: number;
 }
 
 /**
@@ -52,6 +58,7 @@ export function instanceOfAgentReplyEntityDocument(value: object): value is Agen
     if (!('signedUrl' in value) || value['signedUrl'] === undefined) return false;
     if (!('fileName' in value) || value['fileName'] === undefined) return false;
     if (!('mimeType' in value) || value['mimeType'] === undefined) return false;
+    if (!('fileSize' in value) || value['fileSize'] === undefined) return false;
     return true;
 }
 
@@ -69,6 +76,7 @@ export function AgentReplyEntityDocumentFromJSONTyped(json: any, ignoreDiscrimin
         'fileName': json['fileName'],
         'mimeType': json['mimeType'],
         'caption': json['caption'] == null ? undefined : json['caption'],
+        'fileSize': json['fileSize'],
     };
 }
 
@@ -87,6 +95,7 @@ export function AgentReplyEntityDocumentToJSONTyped(value?: AgentReplyEntityDocu
         'fileName': value['fileName'],
         'mimeType': value['mimeType'],
         'caption': value['caption'],
+        'fileSize': value['fileSize'],
     };
 }
 

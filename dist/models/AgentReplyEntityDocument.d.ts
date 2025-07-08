@@ -39,6 +39,12 @@ export interface AgentReplyEntityDocument {
      * @memberof AgentReplyEntityDocument
      */
     caption?: string | null;
+    /**
+     *
+     * @type {number}
+     * @memberof AgentReplyEntityDocument
+     */
+    fileSize: number;
 }
 /**
  * Check if a given object implements the AgentReplyEntityDocument interface.

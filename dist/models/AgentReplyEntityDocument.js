@@ -28,6 +28,8 @@ function instanceOfAgentReplyEntityDocument(value) {
         return false;
     if (!('mimeType' in value) || value['mimeType'] === undefined)
         return false;
+    if (!('fileSize' in value) || value['fileSize'] === undefined)
+        return false;
     return true;
 }
 function AgentReplyEntityDocumentFromJSON(json) {
@@ -42,6 +44,7 @@ function AgentReplyEntityDocumentFromJSONTyped(json, ignoreDiscriminator) {
         'fileName': json['fileName'],
         'mimeType': json['mimeType'],
         'caption': json['caption'] == null ? undefined : json['caption'],
+        'fileSize': json['fileSize'],
     };
 }
 function AgentReplyEntityDocumentToJSON(json) {
@@ -57,5 +60,6 @@ function AgentReplyEntityDocumentToJSONTyped(value, ignoreDiscriminator) {
         'fileName': value['fileName'],
         'mimeType': value['mimeType'],
         'caption': value['caption'],
+        'fileSize': value['fileSize'],
     };
 }

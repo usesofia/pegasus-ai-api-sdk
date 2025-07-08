@@ -37,6 +37,12 @@ export interface AgentReplyEntityImage {
      * @memberof AgentReplyEntityImage
      */
     caption?: string | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof AgentReplyEntityImage
+     */
+    fileSize: number;
 }
 
 /**
@@ -45,6 +51,7 @@ export interface AgentReplyEntityImage {
 export function instanceOfAgentReplyEntityImage(value: object): value is AgentReplyEntityImage {
     if (!('signedUrl' in value) || value['signedUrl'] === undefined) return false;
     if (!('mimeType' in value) || value['mimeType'] === undefined) return false;
+    if (!('fileSize' in value) || value['fileSize'] === undefined) return false;
     return true;
 }
 
@@ -61,6 +68,7 @@ export function AgentReplyEntityImageFromJSONTyped(json: any, ignoreDiscriminato
         'signedUrl': json['signedUrl'],
         'mimeType': json['mimeType'],
         'caption': json['caption'] == null ? undefined : json['caption'],
+        'fileSize': json['fileSize'],
     };
 }
 
@@ -78,6 +86,7 @@ export function AgentReplyEntityImageToJSONTyped(value?: AgentReplyEntityImage |
         'signedUrl': value['signedUrl'],
         'mimeType': value['mimeType'],
         'caption': value['caption'],
+        'fileSize': value['fileSize'],
     };
 }
 

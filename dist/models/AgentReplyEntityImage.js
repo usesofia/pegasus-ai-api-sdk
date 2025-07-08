@@ -26,6 +26,8 @@ function instanceOfAgentReplyEntityImage(value) {
         return false;
     if (!('mimeType' in value) || value['mimeType'] === undefined)
         return false;
+    if (!('fileSize' in value) || value['fileSize'] === undefined)
+        return false;
     return true;
 }
 function AgentReplyEntityImageFromJSON(json) {
@@ -39,6 +41,7 @@ function AgentReplyEntityImageFromJSONTyped(json, ignoreDiscriminator) {
         'signedUrl': json['signedUrl'],
         'mimeType': json['mimeType'],
         'caption': json['caption'] == null ? undefined : json['caption'],
+        'fileSize': json['fileSize'],
     };
 }
 function AgentReplyEntityImageToJSON(json) {
@@ -53,5 +56,6 @@ function AgentReplyEntityImageToJSONTyped(value, ignoreDiscriminator) {
         'signedUrl': value['signedUrl'],
         'mimeType': value['mimeType'],
         'caption': value['caption'],
+        'fileSize': value['fileSize'],
     };
 }

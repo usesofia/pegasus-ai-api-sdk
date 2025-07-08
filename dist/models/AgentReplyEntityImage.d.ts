@@ -33,6 +33,12 @@ export interface AgentReplyEntityImage {
      * @memberof AgentReplyEntityImage
      */
     caption?: string | null;
+    /**
+     *
+     * @type {number}
+     * @memberof AgentReplyEntityImage
+     */
+    fileSize: number;
 }
 /**
  * Check if a given object implements the AgentReplyEntityImage interface.
