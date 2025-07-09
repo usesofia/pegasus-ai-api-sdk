@@ -1,3 +1,4 @@
+export * from './AgentProcessingRequestBodyDto';
 export * from './AgentReplyEntity';
 export * from './AgentReplyEntityDocument';
 export * from './AgentReplyEntityImage';

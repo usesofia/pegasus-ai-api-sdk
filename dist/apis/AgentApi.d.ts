@@ -10,7 +10,10 @@
  * Do not edit the class manually.
  */
 import * as runtime from '../runtime';
-import type { AgentReplyEntity, AgentRequestBodyDto } from '../models/index';
+import type { AgentProcessingRequestBodyDto, AgentReplyEntity, AgentRequestBodyDto } from '../models/index';
+export interface ProcessingReplyRequest {
+    agentProcessingRequestBodyDto: AgentProcessingRequestBodyDto;
+}
 export interface ReplyRequest {
     agentRequestBodyDto: AgentRequestBodyDto;
 }
@@ -21,6 +24,19 @@ export interface ReplyRequest {
  * @interface AgentApiInterface
  */
 export interface AgentApiInterface {
+    /**
+     *
+     * @summary Gera mensagem falando que está processando a última solicitação do usuário.
+     * @param {AgentProcessingRequestBodyDto} agentProcessingRequestBodyDto
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AgentApiInterface
+     */
+    processingReplyRaw(requestParameters: ProcessingReplyRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<AgentReplyEntity>>;
+    /**
+     * Gera mensagem falando que está processando a última solicitação do usuário.
+     */
+    processingReply(requestParameters: ProcessingReplyRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<AgentReplyEntity>;
     /**
      *
      * @summary Responde a última mensagem enviada pelo usuário.
@@ -39,6 +55,14 @@ export interface AgentApiInterface {
  *
  */
 export declare class AgentApi extends runtime.BaseAPI implements AgentApiInterface {
+    /**
+     * Gera mensagem falando que está processando a última solicitação do usuário.
+     */
+    processingReplyRaw(requestParameters: ProcessingReplyRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<AgentReplyEntity>>;
+    /**
+     * Gera mensagem falando que está processando a última solicitação do usuário.
+     */
+    processingReply(requestParameters: ProcessingReplyRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<AgentReplyEntity>;
     /**
      * Responde a última mensagem enviada pelo usuário.
      */

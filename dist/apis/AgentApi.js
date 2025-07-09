@@ -76,6 +76,53 @@ var AgentApi = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
+     * Gera mensagem falando que está processando a última solicitação do usuário.
+     */
+    AgentApi.prototype.processingReplyRaw = function (requestParameters, initOverrides) {
+        return __awaiter(this, void 0, void 0, function () {
+            var queryParameters, headerParameters, urlPath, response;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (requestParameters['agentProcessingRequestBodyDto'] == null) {
+                            throw new runtime.RequiredError('agentProcessingRequestBodyDto', 'Required parameter "agentProcessingRequestBodyDto" was null or undefined when calling processingReply().');
+                        }
+                        queryParameters = {};
+                        headerParameters = {};
+                        headerParameters['Content-Type'] = 'application/json';
+                        urlPath = "/internal/agent/processing-reply";
+                        return [4 /*yield*/, this.request({
+                                path: urlPath,
+                                method: 'POST',
+                                headers: headerParameters,
+                                query: queryParameters,
+                                body: (0, index_1.AgentProcessingRequestBodyDtoToJSON)(requestParameters['agentProcessingRequestBodyDto']),
+                            }, initOverrides)];
+                    case 1:
+                        response = _a.sent();
+                        return [2 /*return*/, new runtime.JSONApiResponse(response, function (jsonValue) { return (0, index_1.AgentReplyEntityFromJSON)(jsonValue); })];
+                }
+            });
+        });
+    };
+    /**
+     * Gera mensagem falando que está processando a última solicitação do usuário.
+     */
+    AgentApi.prototype.processingReply = function (requestParameters, initOverrides) {
+        return __awaiter(this, void 0, void 0, function () {
+            var response;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.processingReplyRaw(requestParameters, initOverrides)];
+                    case 1:
+                        response = _a.sent();
+                        return [4 /*yield*/, response.value()];
+                    case 2: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    };
+    /**
      * Responde a última mensagem enviada pelo usuário.
      */
     AgentApi.prototype.replyRaw = function (requestParameters, initOverrides) {

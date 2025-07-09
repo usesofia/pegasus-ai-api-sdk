@@ -10,6 +10,7 @@ src/apis/FinancialRecordsApi.ts
 src/apis/HealthApi.ts
 src/apis/index.ts
 src/index.ts
+src/models/AgentProcessingRequestBodyDto.ts
 src/models/AgentReplyEntity.ts
 src/models/AgentReplyEntityDocument.ts
 src/models/AgentReplyEntityImage.ts

@@ -15,11 +15,14 @@
 
 import * as runtime from '../runtime';
 import type {
+  AgentProcessingRequestBodyDto,
   AgentReplyEntity,
   AgentRequestBodyDto,
   ExceptionResponseEntity,
 } from '../models/index';
 import {
+    AgentProcessingRequestBodyDtoFromJSON,
+    AgentProcessingRequestBodyDtoToJSON,
     AgentReplyEntityFromJSON,
     AgentReplyEntityToJSON,
     AgentRequestBodyDtoFromJSON,
@@ -27,6 +30,10 @@ import {
     ExceptionResponseEntityFromJSON,
     ExceptionResponseEntityToJSON,
 } from '../models/index';
+
+export interface ProcessingReplyRequest {
+    agentProcessingRequestBodyDto: AgentProcessingRequestBodyDto;
+}
 
 export interface ReplyRequest {
     agentRequestBodyDto: AgentRequestBodyDto;
@@ -39,6 +46,21 @@ export interface ReplyRequest {
  * @interface AgentApiInterface
  */
 export interface AgentApiInterface {
+    /**
+     * 
+     * @summary Gera mensagem falando que está processando a última solicitação do usuário.
+     * @param {AgentProcessingRequestBodyDto} agentProcessingRequestBodyDto 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AgentApiInterface
+     */
+    processingReplyRaw(requestParameters: ProcessingReplyRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<AgentReplyEntity>>;
+
+    /**
+     * Gera mensagem falando que está processando a última solicitação do usuário.
+     */
+    processingReply(requestParameters: ProcessingReplyRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<AgentReplyEntity>;
+
     /**
      * 
      * @summary Responde a última mensagem enviada pelo usuário.
@@ -60,6 +82,45 @@ export interface AgentApiInterface {
  * 
  */
 export class AgentApi extends runtime.BaseAPI implements AgentApiInterface {
+
+    /**
+     * Gera mensagem falando que está processando a última solicitação do usuário.
+     */
+    async processingReplyRaw(requestParameters: ProcessingReplyRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<AgentReplyEntity>> {
+        if (requestParameters['agentProcessingRequestBodyDto'] == null) {
+            throw new runtime.RequiredError(
+                'agentProcessingRequestBodyDto',
+                'Required parameter "agentProcessingRequestBodyDto" was null or undefined when calling processingReply().'
+            );
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+
+        let urlPath = `/internal/agent/processing-reply`;
+
+        const response = await this.request({
+            path: urlPath,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: AgentProcessingRequestBodyDtoToJSON(requestParameters['agentProcessingRequestBodyDto']),
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => AgentReplyEntityFromJSON(jsonValue));
+    }
+
+    /**
+     * Gera mensagem falando que está processando a última solicitação do usuário.
+     */
+    async processingReply(requestParameters: ProcessingReplyRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<AgentReplyEntity> {
+        const response = await this.processingReplyRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
 
     /**
      * Responde a última mensagem enviada pelo usuário.
