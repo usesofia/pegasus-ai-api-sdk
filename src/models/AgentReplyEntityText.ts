@@ -25,6 +25,12 @@ export interface AgentReplyEntityText {
      * @memberof AgentReplyEntityText
      */
     body: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AgentReplyEntityText
+     */
+    enableLinkPreview?: boolean;
 }
 
 /**
@@ -46,6 +52,7 @@ export function AgentReplyEntityTextFromJSONTyped(json: any, ignoreDiscriminator
     return {
         
         'body': json['body'],
+        'enableLinkPreview': json['enableLinkPreview'] == null ? undefined : json['enableLinkPreview'],
     };
 }
 
@@ -61,6 +68,7 @@ export function AgentReplyEntityTextToJSONTyped(value?: AgentReplyEntityText | n
     return {
         
         'body': value['body'],
+        'enableLinkPreview': value['enableLinkPreview'],
     };
 }
 

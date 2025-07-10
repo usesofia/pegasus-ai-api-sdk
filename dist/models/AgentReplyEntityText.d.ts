@@ -21,6 +21,12 @@ export interface AgentReplyEntityText {
      * @memberof AgentReplyEntityText
      */
     body: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof AgentReplyEntityText
+     */
+    enableLinkPreview?: boolean;
 }
 /**
  * Check if a given object implements the AgentReplyEntityText interface.

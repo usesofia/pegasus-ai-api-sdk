@@ -35,6 +35,7 @@ function AgentReplyEntityTextFromJSONTyped(json, ignoreDiscriminator) {
     }
     return {
         'body': json['body'],
+        'enableLinkPreview': json['enableLinkPreview'] == null ? undefined : json['enableLinkPreview'],
     };
 }
 function AgentReplyEntityTextToJSON(json) {
@@ -47,5 +48,6 @@ function AgentReplyEntityTextToJSONTyped(value, ignoreDiscriminator) {
     }
     return {
         'body': value['body'],
+        'enableLinkPreview': value['enableLinkPreview'],
     };
 }
