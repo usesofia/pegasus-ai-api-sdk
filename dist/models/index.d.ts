@@ -32,3 +32,5 @@ export * from './HealthResponseDto';
 export * from './JobRequestPayloadEntity';
 export * from './StartBulkCreateExtractionForWebAppRequestBodyDto';
 export * from './StartBulkCreateExtractionForWebAppRequestBodyDtoFile';
+export * from './UserEntity';
+export * from './UserEntityAvailableOrganizationsInner';

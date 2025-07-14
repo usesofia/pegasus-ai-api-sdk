@@ -8,6 +8,7 @@ src/apis/CacheApi.ts
 src/apis/EmailForwardingIntegrationApi.ts
 src/apis/FinancialRecordsApi.ts
 src/apis/HealthApi.ts
+src/apis/UsersApi.ts
 src/apis/index.ts
 src/index.ts
 src/models/AgentProcessingRequestBodyDto.ts
@@ -44,6 +45,8 @@ src/models/HealthResponseDto.ts
 src/models/JobRequestPayloadEntity.ts
 src/models/StartBulkCreateExtractionForWebAppRequestBodyDto.ts
 src/models/StartBulkCreateExtractionForWebAppRequestBodyDtoFile.ts
+src/models/UserEntity.ts
+src/models/UserEntityAvailableOrganizationsInner.ts
 src/models/index.ts
 src/runtime.ts
 tsconfig.json

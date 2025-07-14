@@ -6,3 +6,4 @@ export * from './CacheApi';
 export * from './EmailForwardingIntegrationApi';
 export * from './FinancialRecordsApi';
 export * from './HealthApi';
+export * from './UsersApi';

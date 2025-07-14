@@ -50,3 +50,5 @@ __exportStar(require("./HealthResponseDto"), exports);
 __exportStar(require("./JobRequestPayloadEntity"), exports);
 __exportStar(require("./StartBulkCreateExtractionForWebAppRequestBodyDto"), exports);
 __exportStar(require("./StartBulkCreateExtractionForWebAppRequestBodyDtoFile"), exports);
+__exportStar(require("./UserEntity"), exports);
+__exportStar(require("./UserEntityAvailableOrganizationsInner"), exports);

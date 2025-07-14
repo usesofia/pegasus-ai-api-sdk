@@ -22,3 +22,4 @@ __exportStar(require("./CacheApi"), exports);
 __exportStar(require("./EmailForwardingIntegrationApi"), exports);
 __exportStar(require("./FinancialRecordsApi"), exports);
 __exportStar(require("./HealthApi"), exports);
+__exportStar(require("./UsersApi"), exports);
