@@ -130,13 +130,17 @@ var BankTransactionsApi = /** @class */ (function (_super) {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
+                        if (requestParameters['organizationId'] == null) {
+                            throw new runtime.RequiredError('organizationId', 'Required parameter "organizationId" was null or undefined when calling systemGetBestSuggestedActionByNewBankTransaction().');
+                        }
                         if (requestParameters['requestBody'] == null) {
                             throw new runtime.RequiredError('requestBody', 'Required parameter "requestBody" was null or undefined when calling systemGetBestSuggestedActionByNewBankTransaction().');
                         }
                         queryParameters = {};
                         headerParameters = {};
                         headerParameters['Content-Type'] = 'application/json';
-                        urlPath = "/internal/bank-transactions/best-suggested-action";
+                        urlPath = "/internal/organizations/{organizationId}/bank-transactions/best-suggested-action";
+                        urlPath = urlPath.replace("{".concat("organizationId", "}"), encodeURIComponent(String(requestParameters['organizationId'])));
                         return [4 /*yield*/, this.request({
                                 path: urlPath,
                                 method: 'POST',

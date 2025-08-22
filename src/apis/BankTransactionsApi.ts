@@ -30,6 +30,7 @@ export interface SystemGetBestSuggestedActionRequest {
 }
 
 export interface SystemGetBestSuggestedActionByNewBankTransactionRequest {
+    organizationId: string;
     requestBody: { [key: string]: any; };
 }
 
@@ -58,6 +59,7 @@ export interface BankTransactionsApiInterface {
     /**
      * 
      * @summary Gera a melhor ação sugerida para uma nova transação bancária.
+     * @param {string} organizationId ID da organização
      * @param {{ [key: string]: any; }} requestBody 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -118,6 +120,13 @@ export class BankTransactionsApi extends runtime.BaseAPI implements BankTransact
      * Gera a melhor ação sugerida para uma nova transação bancária.
      */
     async systemGetBestSuggestedActionByNewBankTransactionRaw(requestParameters: SystemGetBestSuggestedActionByNewBankTransactionRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<BankTransactionsBestSuggestedActionEntity>> {
+        if (requestParameters['organizationId'] == null) {
+            throw new runtime.RequiredError(
+                'organizationId',
+                'Required parameter "organizationId" was null or undefined when calling systemGetBestSuggestedActionByNewBankTransaction().'
+            );
+        }
+
         if (requestParameters['requestBody'] == null) {
             throw new runtime.RequiredError(
                 'requestBody',
@@ -132,7 +141,8 @@ export class BankTransactionsApi extends runtime.BaseAPI implements BankTransact
         headerParameters['Content-Type'] = 'application/json';
 
 
-        let urlPath = `/internal/bank-transactions/best-suggested-action`;
+        let urlPath = `/internal/organizations/{organizationId}/bank-transactions/best-suggested-action`;
+        urlPath = urlPath.replace(`{${"organizationId"}}`, encodeURIComponent(String(requestParameters['organizationId'])));
 
         const response = await this.request({
             path: urlPath,

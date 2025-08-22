@@ -15,6 +15,7 @@ export interface SystemGetBestSuggestedActionRequest {
     bankTransactionId: string;
 }
 export interface SystemGetBestSuggestedActionByNewBankTransactionRequest {
+    organizationId: string;
     requestBody: {
         [key: string]: any;
     };
@@ -42,6 +43,7 @@ export interface BankTransactionsApiInterface {
     /**
      *
      * @summary Gera a melhor ação sugerida para uma nova transação bancária.
+     * @param {string} organizationId ID da organização
      * @param {{ [key: string]: any; }} requestBody
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
