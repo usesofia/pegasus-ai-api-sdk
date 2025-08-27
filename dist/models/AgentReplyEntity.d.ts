@@ -36,6 +36,12 @@ export interface AgentReplyEntity {
      * @memberof AgentReplyEntity
      */
     text?: AgentReplyEntityText | null;
+    /**
+     *
+     * @type {boolean}
+     * @memberof AgentReplyEntity
+     */
+    markMessage?: boolean;
 }
 /**
  * Check if a given object implements the AgentReplyEntity interface.

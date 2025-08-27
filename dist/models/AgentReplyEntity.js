@@ -38,6 +38,7 @@ function AgentReplyEntityFromJSONTyped(json, ignoreDiscriminator) {
         'document': json['document'] == null ? undefined : (0, AgentReplyEntityDocument_1.AgentReplyEntityDocumentFromJSON)(json['document']),
         'image': json['image'] == null ? undefined : (0, AgentReplyEntityImage_1.AgentReplyEntityImageFromJSON)(json['image']),
         'text': json['text'] == null ? undefined : (0, AgentReplyEntityText_1.AgentReplyEntityTextFromJSON)(json['text']),
+        'markMessage': json['markMessage'] == null ? undefined : json['markMessage'],
     };
 }
 function AgentReplyEntityToJSON(json) {
@@ -52,5 +53,6 @@ function AgentReplyEntityToJSONTyped(value, ignoreDiscriminator) {
         'document': (0, AgentReplyEntityDocument_1.AgentReplyEntityDocumentToJSON)(value['document']),
         'image': (0, AgentReplyEntityImage_1.AgentReplyEntityImageToJSON)(value['image']),
         'text': (0, AgentReplyEntityText_1.AgentReplyEntityTextToJSON)(value['text']),
+        'markMessage': value['markMessage'],
     };
 }

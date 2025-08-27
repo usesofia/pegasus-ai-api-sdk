@@ -59,6 +59,12 @@ export interface AgentReplyEntity {
      * @memberof AgentReplyEntity
      */
     text?: AgentReplyEntityText | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AgentReplyEntity
+     */
+    markMessage?: boolean;
 }
 
 /**
@@ -81,6 +87,7 @@ export function AgentReplyEntityFromJSONTyped(json: any, ignoreDiscriminator: bo
         'document': json['document'] == null ? undefined : AgentReplyEntityDocumentFromJSON(json['document']),
         'image': json['image'] == null ? undefined : AgentReplyEntityImageFromJSON(json['image']),
         'text': json['text'] == null ? undefined : AgentReplyEntityTextFromJSON(json['text']),
+        'markMessage': json['markMessage'] == null ? undefined : json['markMessage'],
     };
 }
 
@@ -98,6 +105,7 @@ export function AgentReplyEntityToJSONTyped(value?: AgentReplyEntity | null, ign
         'document': AgentReplyEntityDocumentToJSON(value['document']),
         'image': AgentReplyEntityImageToJSON(value['image']),
         'text': AgentReplyEntityTextToJSON(value['text']),
+        'markMessage': value['markMessage'],
     };
 }
 
