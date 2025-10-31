@@ -9,6 +9,7 @@ Name | Type
 `document` | [AgentReplyEntityDocument](AgentReplyEntityDocument.md)
 `image` | [AgentReplyEntityImage](AgentReplyEntityImage.md)
 `text` | [AgentReplyEntityText](AgentReplyEntityText.md)
+`toolCalls` | [Array&lt;AgentReplyEntityToolCallsInner&gt;](AgentReplyEntityToolCallsInner.md)
 `markMessage` | boolean
 
 ## Example
@@ -21,6 +22,7 @@ const example = {
   "document": null,
   "image": null,
   "text": null,
+  "toolCalls": null,
   "markMessage": null,
 } satisfies AgentReplyEntity
 

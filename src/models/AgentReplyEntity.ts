@@ -20,6 +20,13 @@ import {
     AgentReplyEntityDocumentToJSON,
     AgentReplyEntityDocumentToJSONTyped,
 } from './AgentReplyEntityDocument';
+import type { AgentReplyEntityToolCallsInner } from './AgentReplyEntityToolCallsInner';
+import {
+    AgentReplyEntityToolCallsInnerFromJSON,
+    AgentReplyEntityToolCallsInnerFromJSONTyped,
+    AgentReplyEntityToolCallsInnerToJSON,
+    AgentReplyEntityToolCallsInnerToJSONTyped,
+} from './AgentReplyEntityToolCallsInner';
 import type { AgentReplyEntityImage } from './AgentReplyEntityImage';
 import {
     AgentReplyEntityImageFromJSON,
@@ -60,6 +67,12 @@ export interface AgentReplyEntity {
      */
     text?: AgentReplyEntityText | null;
     /**
+     * As chamadas de ferramentas feitas pela Sofia para gerar a resposta.
+     * @type {Array<AgentReplyEntityToolCallsInner>}
+     * @memberof AgentReplyEntity
+     */
+    toolCalls: Array<AgentReplyEntityToolCallsInner>;
+    /**
      * 
      * @type {boolean}
      * @memberof AgentReplyEntity
@@ -71,6 +84,7 @@ export interface AgentReplyEntity {
  * Check if a given object implements the AgentReplyEntity interface.
  */
 export function instanceOfAgentReplyEntity(value: object): value is AgentReplyEntity {
+    if (!('toolCalls' in value) || value['toolCalls'] === undefined) return false;
     return true;
 }
 
@@ -87,6 +101,7 @@ export function AgentReplyEntityFromJSONTyped(json: any, ignoreDiscriminator: bo
         'document': json['document'] == null ? undefined : AgentReplyEntityDocumentFromJSON(json['document']),
         'image': json['image'] == null ? undefined : AgentReplyEntityImageFromJSON(json['image']),
         'text': json['text'] == null ? undefined : AgentReplyEntityTextFromJSON(json['text']),
+        'toolCalls': ((json['toolCalls'] as Array<any>).map(AgentReplyEntityToolCallsInnerFromJSON)),
         'markMessage': json['markMessage'] == null ? undefined : json['markMessage'],
     };
 }
@@ -105,6 +120,7 @@ export function AgentReplyEntityToJSONTyped(value?: AgentReplyEntity | null, ign
         'document': AgentReplyEntityDocumentToJSON(value['document']),
         'image': AgentReplyEntityImageToJSON(value['image']),
         'text': AgentReplyEntityTextToJSON(value['text']),
+        'toolCalls': ((value['toolCalls'] as Array<any>).map(AgentReplyEntityToolCallsInnerToJSON)),
         'markMessage': value['markMessage'],
     };
 }

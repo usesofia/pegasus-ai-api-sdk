@@ -73,6 +73,7 @@ All URIs are relative to *http://localhost*
 - [AgentReplyEntityDocument](docs/AgentReplyEntityDocument.md)
 - [AgentReplyEntityImage](docs/AgentReplyEntityImage.md)
 - [AgentReplyEntityText](docs/AgentReplyEntityText.md)
+- [AgentReplyEntityToolCallsInner](docs/AgentReplyEntityToolCallsInner.md)
 - [AgentRequestBodyDto](docs/AgentRequestBodyDto.md)
 - [AgentRequestBodyDtoMessageContext](docs/AgentRequestBodyDtoMessageContext.md)
 - [BankTransactionsBestSuggestedActionEntity](docs/BankTransactionsBestSuggestedActionEntity.md)

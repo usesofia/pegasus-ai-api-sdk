@@ -3,6 +3,7 @@ export * from './AgentReplyEntity';
 export * from './AgentReplyEntityDocument';
 export * from './AgentReplyEntityImage';
 export * from './AgentReplyEntityText';
+export * from './AgentReplyEntityToolCallsInner';
 export * from './AgentRequestBodyDto';
 export * from './AgentRequestBodyDtoMessageContext';
 export * from './BankTransactionsBestSuggestedActionEntity';

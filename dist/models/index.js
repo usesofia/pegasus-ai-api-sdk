@@ -21,6 +21,7 @@ __exportStar(require("./AgentReplyEntity"), exports);
 __exportStar(require("./AgentReplyEntityDocument"), exports);
 __exportStar(require("./AgentReplyEntityImage"), exports);
 __exportStar(require("./AgentReplyEntityText"), exports);
+__exportStar(require("./AgentReplyEntityToolCallsInner"), exports);
 __exportStar(require("./AgentRequestBodyDto"), exports);
 __exportStar(require("./AgentRequestBodyDtoMessageContext"), exports);
 __exportStar(require("./BankTransactionsBestSuggestedActionEntity"), exports);

@@ -7,6 +7,7 @@ docs/AgentReplyEntity.md
 docs/AgentReplyEntityDocument.md
 docs/AgentReplyEntityImage.md
 docs/AgentReplyEntityText.md
+docs/AgentReplyEntityToolCallsInner.md
 docs/AgentRequestBodyDto.md
 docs/AgentRequestBodyDtoMessageContext.md
 docs/BankTransactionsApi.md
@@ -59,6 +60,7 @@ src/models/AgentReplyEntity.ts
 src/models/AgentReplyEntityDocument.ts
 src/models/AgentReplyEntityImage.ts
 src/models/AgentReplyEntityText.ts
+src/models/AgentReplyEntityToolCallsInner.ts
 src/models/AgentRequestBodyDto.ts
 src/models/AgentRequestBodyDtoMessageContext.ts
 src/models/BankTransactionsBestSuggestedActionEntity.ts

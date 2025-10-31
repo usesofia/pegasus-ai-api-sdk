@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 import type { AgentReplyEntityDocument } from './AgentReplyEntityDocument';
+import type { AgentReplyEntityToolCallsInner } from './AgentReplyEntityToolCallsInner';
 import type { AgentReplyEntityImage } from './AgentReplyEntityImage';
 import type { AgentReplyEntityText } from './AgentReplyEntityText';
 /**
@@ -36,6 +37,12 @@ export interface AgentReplyEntity {
      * @memberof AgentReplyEntity
      */
     text?: AgentReplyEntityText | null;
+    /**
+     * As chamadas de ferramentas feitas pela Sofia para gerar a resposta.
+     * @type {Array<AgentReplyEntityToolCallsInner>}
+     * @memberof AgentReplyEntity
+     */
+    toolCalls: Array<AgentReplyEntityToolCallsInner>;
     /**
      *
      * @type {boolean}
