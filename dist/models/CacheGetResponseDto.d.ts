@@ -16,7 +16,7 @@
  */
 export interface CacheGetResponseDto {
     /**
-     * Cached string value, null if not found
+     *
      * @type {string}
      * @memberof CacheGetResponseDto
      */

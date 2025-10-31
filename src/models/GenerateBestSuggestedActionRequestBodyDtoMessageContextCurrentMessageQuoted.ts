@@ -29,7 +29,7 @@ import {
 } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner';
 
 /**
- * Mensagem citada.
+ * 
  * @export
  * @interface GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted
  */

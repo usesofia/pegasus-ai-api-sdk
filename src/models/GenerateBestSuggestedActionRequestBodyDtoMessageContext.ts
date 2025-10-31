@@ -34,7 +34,7 @@ export interface GenerateBestSuggestedActionRequestBodyDtoMessageContext {
      */
     chatId: string;
     /**
-     * Título do chat.
+     * 
      * @type {string}
      * @memberof GenerateBestSuggestedActionRequestBodyDtoMessageContext
      */

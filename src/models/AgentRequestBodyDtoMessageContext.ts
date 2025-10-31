@@ -34,7 +34,7 @@ export interface AgentRequestBodyDtoMessageContext {
      */
     chatId: string;
     /**
-     * Título do chat.
+     * 
      * @type {string}
      * @memberof AgentRequestBodyDtoMessageContext
      */

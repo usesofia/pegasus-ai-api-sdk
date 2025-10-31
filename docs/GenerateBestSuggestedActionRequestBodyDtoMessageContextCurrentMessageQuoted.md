@@ -1,7 +1,6 @@
 
 # GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted
 
-Mensagem citada.
 
 ## Properties
 

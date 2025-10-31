@@ -12,7 +12,7 @@
 import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom';
 import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner';
 /**
- * Mensagem citada.
+ *
  * @export
  * @interface GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted
  */
