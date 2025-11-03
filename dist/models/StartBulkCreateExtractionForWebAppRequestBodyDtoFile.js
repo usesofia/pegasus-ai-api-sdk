@@ -24,8 +24,6 @@ exports.StartBulkCreateExtractionForWebAppRequestBodyDtoFileToJSONTyped = StartB
 function instanceOfStartBulkCreateExtractionForWebAppRequestBodyDtoFile(value) {
     if (!('url' in value) || value['url'] === undefined)
         return false;
-    if (!('signedUrl' in value) || value['signedUrl'] === undefined)
-        return false;
     if (!('mimeType' in value) || value['mimeType'] === undefined)
         return false;
     if (!('fileName' in value) || value['fileName'] === undefined)
@@ -41,7 +39,6 @@ function StartBulkCreateExtractionForWebAppRequestBodyDtoFileFromJSONTyped(json,
     }
     return {
         'url': json['url'],
-        'signedUrl': json['signedUrl'],
         'mimeType': json['mimeType'],
         'fileName': json['fileName'],
     };
@@ -56,7 +53,6 @@ function StartBulkCreateExtractionForWebAppRequestBodyDtoFileToJSONTyped(value, 
     }
     return {
         'url': value['url'],
-        'signedUrl': value['signedUrl'],
         'mimeType': value['mimeType'],
         'fileName': value['fileName'],
     };

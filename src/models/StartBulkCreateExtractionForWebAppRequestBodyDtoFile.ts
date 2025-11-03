@@ -30,12 +30,6 @@ export interface StartBulkCreateExtractionForWebAppRequestBodyDtoFile {
      * @type {string}
      * @memberof StartBulkCreateExtractionForWebAppRequestBodyDtoFile
      */
-    signedUrl: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof StartBulkCreateExtractionForWebAppRequestBodyDtoFile
-     */
     mimeType: string;
     /**
      * 
@@ -50,7 +44,6 @@ export interface StartBulkCreateExtractionForWebAppRequestBodyDtoFile {
  */
 export function instanceOfStartBulkCreateExtractionForWebAppRequestBodyDtoFile(value: object): value is StartBulkCreateExtractionForWebAppRequestBodyDtoFile {
     if (!('url' in value) || value['url'] === undefined) return false;
-    if (!('signedUrl' in value) || value['signedUrl'] === undefined) return false;
     if (!('mimeType' in value) || value['mimeType'] === undefined) return false;
     if (!('fileName' in value) || value['fileName'] === undefined) return false;
     return true;
@@ -67,7 +60,6 @@ export function StartBulkCreateExtractionForWebAppRequestBodyDtoFileFromJSONType
     return {
         
         'url': json['url'],
-        'signedUrl': json['signedUrl'],
         'mimeType': json['mimeType'],
         'fileName': json['fileName'],
     };
@@ -85,7 +77,6 @@ export function StartBulkCreateExtractionForWebAppRequestBodyDtoFileToJSONTyped(
     return {
         
         'url': value['url'],
-        'signedUrl': value['signedUrl'],
         'mimeType': value['mimeType'],
         'fileName': value['fileName'],
     };

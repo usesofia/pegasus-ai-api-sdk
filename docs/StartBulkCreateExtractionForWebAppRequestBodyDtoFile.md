@@ -7,7 +7,6 @@
 Name | Type
 ------------ | -------------
 `url` | string
-`signedUrl` | string
 `mimeType` | string
 `fileName` | string
 
@@ -19,7 +18,6 @@ import type { StartBulkCreateExtractionForWebAppRequestBodyDtoFile } from '@uses
 // TODO: Update the object below with actual values
 const example = {
   "url": null,
-  "signedUrl": null,
   "mimeType": null,
   "fileName": null,
 } satisfies StartBulkCreateExtractionForWebAppRequestBodyDtoFile

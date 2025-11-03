@@ -26,12 +26,6 @@ export interface StartBulkCreateExtractionForWebAppRequestBodyDtoFile {
      * @type {string}
      * @memberof StartBulkCreateExtractionForWebAppRequestBodyDtoFile
      */
-    signedUrl: string;
-    /**
-     *
-     * @type {string}
-     * @memberof StartBulkCreateExtractionForWebAppRequestBodyDtoFile
-     */
     mimeType: string;
     /**
      *
