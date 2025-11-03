@@ -12,6 +12,7 @@ Name | Type
 `content` | string
 `files` | [Array&lt;GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner&gt;](GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner.md)
 `quoted` | [GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted](GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted.md)
+`toolCalls` | [Array&lt;GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner&gt;](GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner.md)
 
 ## Example
 
@@ -26,6 +27,7 @@ const example = {
   "content": null,
   "files": null,
   "quoted": null,
+  "toolCalls": null,
 } satisfies GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessage
 
 console.log(example)

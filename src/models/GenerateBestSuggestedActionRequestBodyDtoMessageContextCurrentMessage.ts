@@ -20,6 +20,13 @@ import {
     GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFromToJSON,
     GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFromToJSONTyped,
 } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom';
+import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner';
+import {
+    GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInnerFromJSON,
+    GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInnerFromJSONTyped,
+    GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInnerToJSON,
+    GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInnerToJSONTyped,
+} from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner';
 import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted';
 import {
     GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuotedFromJSON,
@@ -77,6 +84,12 @@ export interface GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentM
      * @memberof GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessage
      */
     quoted?: GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted | null;
+    /**
+     * 
+     * @type {Array<GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner>}
+     * @memberof GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessage
+     */
+    toolCalls?: Array<GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner> | null;
 }
 
 /**
@@ -107,6 +120,7 @@ export function GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMe
         'content': json['content'],
         'files': ((json['files'] as Array<any>).map(GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInnerFromJSON)),
         'quoted': json['quoted'] == null ? undefined : GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuotedFromJSON(json['quoted']),
+        'toolCalls': json['toolCalls'] == null ? undefined : ((json['toolCalls'] as Array<any>).map(GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInnerFromJSON)),
     };
 }
 
@@ -127,6 +141,7 @@ export function GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMe
         'content': value['content'],
         'files': ((value['files'] as Array<any>).map(GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInnerToJSON)),
         'quoted': GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuotedToJSON(value['quoted']),
+        'toolCalls': value['toolCalls'] == null ? undefined : ((value['toolCalls'] as Array<any>).map(GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInnerToJSON)),
     };
 }
 

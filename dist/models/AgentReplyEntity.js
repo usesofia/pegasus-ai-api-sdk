@@ -19,7 +19,7 @@ exports.AgentReplyEntityFromJSONTyped = AgentReplyEntityFromJSONTyped;
 exports.AgentReplyEntityToJSON = AgentReplyEntityToJSON;
 exports.AgentReplyEntityToJSONTyped = AgentReplyEntityToJSONTyped;
 var AgentReplyEntityDocument_1 = require("./AgentReplyEntityDocument");
-var AgentReplyEntityToolCallsInner_1 = require("./AgentReplyEntityToolCallsInner");
+var GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner_1 = require("./GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner");
 var AgentReplyEntityImage_1 = require("./AgentReplyEntityImage");
 var AgentReplyEntityText_1 = require("./AgentReplyEntityText");
 /**
@@ -41,7 +41,7 @@ function AgentReplyEntityFromJSONTyped(json, ignoreDiscriminator) {
         'document': json['document'] == null ? undefined : (0, AgentReplyEntityDocument_1.AgentReplyEntityDocumentFromJSON)(json['document']),
         'image': json['image'] == null ? undefined : (0, AgentReplyEntityImage_1.AgentReplyEntityImageFromJSON)(json['image']),
         'text': json['text'] == null ? undefined : (0, AgentReplyEntityText_1.AgentReplyEntityTextFromJSON)(json['text']),
-        'toolCalls': (json['toolCalls'].map(AgentReplyEntityToolCallsInner_1.AgentReplyEntityToolCallsInnerFromJSON)),
+        'toolCalls': (json['toolCalls'].map(GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner_1.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInnerFromJSON)),
         'markMessage': json['markMessage'] == null ? undefined : json['markMessage'],
     };
 }
@@ -57,7 +57,7 @@ function AgentReplyEntityToJSONTyped(value, ignoreDiscriminator) {
         'document': (0, AgentReplyEntityDocument_1.AgentReplyEntityDocumentToJSON)(value['document']),
         'image': (0, AgentReplyEntityImage_1.AgentReplyEntityImageToJSON)(value['image']),
         'text': (0, AgentReplyEntityText_1.AgentReplyEntityTextToJSON)(value['text']),
-        'toolCalls': (value['toolCalls'].map(AgentReplyEntityToolCallsInner_1.AgentReplyEntityToolCallsInnerToJSON)),
+        'toolCalls': (value['toolCalls'].map(GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner_1.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInnerToJSON)),
         'markMessage': value['markMessage'],
     };
 }

@@ -19,6 +19,7 @@ exports.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFro
 exports.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToJSON = GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToJSON;
 exports.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToJSONTyped = GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToJSONTyped;
 var GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom_1 = require("./GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom");
+var GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner_1 = require("./GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner");
 var GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted_1 = require("./GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted");
 var GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner_1 = require("./GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner");
 /**
@@ -51,6 +52,7 @@ function GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFr
         'content': json['content'],
         'files': (json['files'].map(GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner_1.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInnerFromJSON)),
         'quoted': json['quoted'] == null ? undefined : (0, GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted_1.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuotedFromJSON)(json['quoted']),
+        'toolCalls': json['toolCalls'] == null ? undefined : (json['toolCalls'].map(GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner_1.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInnerFromJSON)),
     };
 }
 function GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToJSON(json) {
@@ -68,5 +70,6 @@ function GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageTo
         'content': value['content'],
         'files': (value['files'].map(GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner_1.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInnerToJSON)),
         'quoted': (0, GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted_1.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuotedToJSON)(value['quoted']),
+        'toolCalls': value['toolCalls'] == null ? undefined : (value['toolCalls'].map(GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner_1.GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInnerToJSON)),
     };
 }

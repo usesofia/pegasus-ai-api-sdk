@@ -21,7 +21,6 @@ __exportStar(require("./AgentReplyEntity"), exports);
 __exportStar(require("./AgentReplyEntityDocument"), exports);
 __exportStar(require("./AgentReplyEntityImage"), exports);
 __exportStar(require("./AgentReplyEntityText"), exports);
-__exportStar(require("./AgentReplyEntityToolCallsInner"), exports);
 __exportStar(require("./AgentRequestBodyDto"), exports);
 __exportStar(require("./AgentRequestBodyDtoMessageContext"), exports);
 __exportStar(require("./BankTransactionsBestSuggestedActionEntity"), exports);
@@ -47,6 +46,7 @@ __exportStar(require("./GenerateBestSuggestedActionRequestBodyDtoMessageContextC
 __exportStar(require("./GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner"), exports);
 __exportStar(require("./GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom"), exports);
 __exportStar(require("./GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted"), exports);
+__exportStar(require("./GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner"), exports);
 __exportStar(require("./HealthResponseDto"), exports);
 __exportStar(require("./JobRequestPayloadEntity"), exports);
 __exportStar(require("./StartBulkCreateExtractionForWebAppRequestBodyDto"), exports);

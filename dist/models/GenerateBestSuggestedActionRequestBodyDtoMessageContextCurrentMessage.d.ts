@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom';
+import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner';
 import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted';
 import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner';
 /**
@@ -54,6 +55,12 @@ export interface GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentM
      * @memberof GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessage
      */
     quoted?: GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted | null;
+    /**
+     *
+     * @type {Array<GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner>}
+     * @memberof GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessage
+     */
+    toolCalls?: Array<GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner> | null;
 }
 /**
  * Check if a given object implements the GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessage interface.

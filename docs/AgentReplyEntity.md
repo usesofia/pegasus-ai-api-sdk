@@ -9,7 +9,7 @@ Name | Type
 `document` | [AgentReplyEntityDocument](AgentReplyEntityDocument.md)
 `image` | [AgentReplyEntityImage](AgentReplyEntityImage.md)
 `text` | [AgentReplyEntityText](AgentReplyEntityText.md)
-`toolCalls` | [Array&lt;AgentReplyEntityToolCallsInner&gt;](AgentReplyEntityToolCallsInner.md)
+`toolCalls` | [Array&lt;GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner&gt;](GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner.md)
 `markMessage` | boolean
 
 ## Example

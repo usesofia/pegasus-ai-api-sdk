@@ -1,5 +1,5 @@
 
-# AgentReplyEntityToolCallsInner
+# GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner
 
 
 ## Properties
@@ -13,14 +13,14 @@ Name | Type
 ## Example
 
 ```typescript
-import type { AgentReplyEntityToolCallsInner } from '@usesofia/pegasus-ai-api-sdk'
+import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner } from '@usesofia/pegasus-ai-api-sdk'
 
 // TODO: Update the object below with actual values
 const example = {
   "toolCallId": null,
   "toolName": null,
   "input": null,
-} satisfies AgentReplyEntityToolCallsInner
+} satisfies GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner
 
 console.log(example)
 
@@ -29,7 +29,7 @@ const exampleJSON: string = JSON.stringify(example)
 console.log(exampleJSON)
 
 // Parse the JSON string back to an object
-const exampleParsed = JSON.parse(exampleJSON) as AgentReplyEntityToolCallsInner
+const exampleParsed = JSON.parse(exampleJSON) as GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner
 console.log(exampleParsed)
 ```
 

@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 import type { AgentReplyEntityDocument } from './AgentReplyEntityDocument';
-import type { AgentReplyEntityToolCallsInner } from './AgentReplyEntityToolCallsInner';
+import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner';
 import type { AgentReplyEntityImage } from './AgentReplyEntityImage';
 import type { AgentReplyEntityText } from './AgentReplyEntityText';
 /**
@@ -39,10 +39,10 @@ export interface AgentReplyEntity {
     text?: AgentReplyEntityText | null;
     /**
      * As chamadas de ferramentas feitas pela Sofia para gerar a resposta.
-     * @type {Array<AgentReplyEntityToolCallsInner>}
+     * @type {Array<GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner>}
      * @memberof AgentReplyEntity
      */
-    toolCalls: Array<AgentReplyEntityToolCallsInner>;
+    toolCalls: Array<GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner>;
     /**
      *
      * @type {boolean}

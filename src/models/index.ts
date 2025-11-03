@@ -5,7 +5,6 @@ export * from './AgentReplyEntity';
 export * from './AgentReplyEntityDocument';
 export * from './AgentReplyEntityImage';
 export * from './AgentReplyEntityText';
-export * from './AgentReplyEntityToolCallsInner';
 export * from './AgentRequestBodyDto';
 export * from './AgentRequestBodyDtoMessageContext';
 export * from './BankTransactionsBestSuggestedActionEntity';
@@ -31,6 +30,7 @@ export * from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentM
 export * from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFilesInner';
 export * from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageFrom';
 export * from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageQuoted';
+export * from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner';
 export * from './HealthResponseDto';
 export * from './JobRequestPayloadEntity';
 export * from './StartBulkCreateExtractionForWebAppRequestBodyDto';

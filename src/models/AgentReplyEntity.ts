@@ -20,13 +20,13 @@ import {
     AgentReplyEntityDocumentToJSON,
     AgentReplyEntityDocumentToJSONTyped,
 } from './AgentReplyEntityDocument';
-import type { AgentReplyEntityToolCallsInner } from './AgentReplyEntityToolCallsInner';
+import type { GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner } from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner';
 import {
-    AgentReplyEntityToolCallsInnerFromJSON,
-    AgentReplyEntityToolCallsInnerFromJSONTyped,
-    AgentReplyEntityToolCallsInnerToJSON,
-    AgentReplyEntityToolCallsInnerToJSONTyped,
-} from './AgentReplyEntityToolCallsInner';
+    GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInnerFromJSON,
+    GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInnerFromJSONTyped,
+    GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInnerToJSON,
+    GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInnerToJSONTyped,
+} from './GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner';
 import type { AgentReplyEntityImage } from './AgentReplyEntityImage';
 import {
     AgentReplyEntityImageFromJSON,
@@ -68,10 +68,10 @@ export interface AgentReplyEntity {
     text?: AgentReplyEntityText | null;
     /**
      * As chamadas de ferramentas feitas pela Sofia para gerar a resposta.
-     * @type {Array<AgentReplyEntityToolCallsInner>}
+     * @type {Array<GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner>}
      * @memberof AgentReplyEntity
      */
-    toolCalls: Array<AgentReplyEntityToolCallsInner>;
+    toolCalls: Array<GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInner>;
     /**
      * 
      * @type {boolean}
@@ -101,7 +101,7 @@ export function AgentReplyEntityFromJSONTyped(json: any, ignoreDiscriminator: bo
         'document': json['document'] == null ? undefined : AgentReplyEntityDocumentFromJSON(json['document']),
         'image': json['image'] == null ? undefined : AgentReplyEntityImageFromJSON(json['image']),
         'text': json['text'] == null ? undefined : AgentReplyEntityTextFromJSON(json['text']),
-        'toolCalls': ((json['toolCalls'] as Array<any>).map(AgentReplyEntityToolCallsInnerFromJSON)),
+        'toolCalls': ((json['toolCalls'] as Array<any>).map(GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInnerFromJSON)),
         'markMessage': json['markMessage'] == null ? undefined : json['markMessage'],
     };
 }
@@ -120,7 +120,7 @@ export function AgentReplyEntityToJSONTyped(value?: AgentReplyEntity | null, ign
         'document': AgentReplyEntityDocumentToJSON(value['document']),
         'image': AgentReplyEntityImageToJSON(value['image']),
         'text': AgentReplyEntityTextToJSON(value['text']),
-        'toolCalls': ((value['toolCalls'] as Array<any>).map(AgentReplyEntityToolCallsInnerToJSON)),
+        'toolCalls': ((value['toolCalls'] as Array<any>).map(GenerateBestSuggestedActionRequestBodyDtoMessageContextCurrentMessageToolCallsInnerToJSON)),
         'markMessage': value['markMessage'],
     };
 }
